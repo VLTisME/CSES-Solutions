@@ -1,0 +1,37 @@
+#include <bits/stdc++.h>
+
+using namespace std;
+
+const int SZ = 5e3;
+
+string m, n;
+
+int dp[SZ + 5][SZ + 5];
+
+signed main(){
+    ios::sync_with_stdio(0);
+    cin.tie(0);
+
+    cin >> m >> n;
+    m = "." + m;
+    n = "." + n;
+
+    for (int i = 0; i <= SZ; ++i){
+        for (int j = 0; j <= SZ; ++j){
+            dp[i][j] = 1e9;
+        }
+    }
+
+    dp[0][0] = 0;
+    for (int i = 0; i < (int)m.size(); ++i){
+    for (int j = 0; j < (int)n.size(); ++j){
+        if (i + 1 < (int)m.size()) dp[i + 1][j] = min(dp[i + 1][j], dp[i][j] + 1);
+        if (j + 1 < (int)n.size()) dp[i][j + 1] = min(dp[i][j + 1], dp[i][j] + 1);
+        if (i + 1 < (int)m.size() && j + 1 < (int)n.size() && m[i + 1] == n[j + 1]){
+            dp[i + 1][j + 1] = min(dp[i + 1][j + 1], dp[i][j]);
+        }
+        if (i + 1 < (int)m.size() && j + 1 < (int)n.size()) dp[i + 1][j + 1] = min(dp[i + 1][j + 1], dp[i][j] + 1);
+        }
+    }
+    cout << dp[(int)m.size() - 1][(int)n.size() - 1];
+}
