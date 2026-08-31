@@ -6,7 +6,7 @@
 # Goals
 
 **Main quests:**
-- Solve all CSES Problem Set (by February 2027)
+- Solve all CSES Problem Set (by February 2027, ~3 problems daily)
 - CM (by February, 2027)
 **Side quests:**
 - Solve all problems in: [BF ITK20 Syllabus](https://github.com/hoanghai1803/ITK20NBK)
