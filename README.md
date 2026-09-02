@@ -12,5 +12,5 @@
 - Solve all problems in: [BF ITK20 Syllabus](https://github.com/hoanghai1803/ITK20NBK)
 
 ## Progress
-- CSES Problems solved: 4/400
+- CSES Problems solved: 9/400
 - CF's rating: 1425
